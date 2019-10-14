@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles %}
+  <head>
+
+    <meta charset="utf-8">
+    <title>ExamHall</title>
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+
+
+
+
+
+
+  </head>
+<body >
+
+        <div style="background-color:black;color:white; text-align:center;padding-bottom:10px;">
+            <p><h2>Exam Hall Seating Arrangement System</h2></p>
+        </div>
+
+         <!-- This is navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">ExamHall</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" href="">Hello, Guest user <span class="sr-only">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'admin' %}">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Student</a>
+              </li >
+
+            </ul>
+          </div>
+        </nav>
+        <br>
+
+
+
+        <div class="container">
+            <form method="POST" >
+                {% csrf_token %}
+
+
+                  <div class="col-md-5">
+                      {{ form.as_p }}
+                      Date Format : 1997-08-08
+                  </div>
+
+                  &nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+
+
+
+
+
+
+
+        <div style="background-color:black;color:white; text-align:center;padding-bottom:10px;">
+            <p><h2>Copyright &copy; 2019 ExamHall.com</h2></p>
+
+        </div>
+
+
+
+
+
+</body>
+</html>

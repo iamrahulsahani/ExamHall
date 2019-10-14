@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles %}
+  <head>
+
+    <meta charset="utf-8">
+    <title>ExamHall</title>
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+
+  </head>
+<body >
+
+        <div style="background-color:black;color:white; text-align:center;padding-bottom:10px;">
+            <p><h2>Exam Hall Seating Arrangement System</h2></p>
+        </div>
+
+         <!-- This is navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">ExamHall</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" href="">Hello, Guest user <span class="sr-only">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'admin' %}">Admin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Student</a>
+              </li >
+
+            </ul>
+          </div>
+        </nav>
+
+
+
+        <div class="jumbotron">
+          <h1 class="display-4">Welcome To ExamHall.com</h1>
+          <p class="lead">This is a simple Exam Hall Seating Arrangement System.</p>
+          <hr class="my-4">
+          <p>This project is developed for the college, to simplify examination hall allotment and seating arrangement manual work. It
+            facilitates to access the examination information of a particular student in a particular class. The purpose of developing this
+            seating arrangement system is to provide a way to allocate exam hall for each student without any clash. Mostly students are
+            facing many problems for finding the exam hall, so a newly invented concept helps for the staffs to generate their exam hall
+            arrangement easily. This project also allocate particular invigilator for particular hall. It is also very useful for the college where
+            the software may generate the hall separation and concerned reports. Hence manual Excel sheet and paper work is automated
+            based on their departments and register numbers. </p>
+
+            <p>The purpose of developing exam hall seating arrangement
+            system is to computerized the traditional way of conducting
+            exams and help staffs in allocating exam hall easily without
+            any burden. Another purpose of developing this software is to
+            generate the report automatically during exams at the end of
+            the session or in between the session. This project also allocate
+            particular invigilator for particular hall. It is also very useful
+            for the college where the software may generate the hall
+            separation. Hence the hall is allocated to the students
+            automatically based on their departments and register numbers.
+            We may also take print outs.</p>
+          <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Register</a>
+        </div>
+
+
+
+
+
+
+        <div style="background-color:black;color:white; text-align:center;padding-bottom:10px;">
+            <p><h2>Copyright &copy; 2019 ExamHall.com</h2></p>
+
+        </div>
+
+
+
+
+
+</body>
+</html>

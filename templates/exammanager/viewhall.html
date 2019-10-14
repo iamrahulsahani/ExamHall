@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles %}
+  <head>
+
+    <meta charset="utf-8">
+    <title>ExamHall</title>
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+
+
+
+  </head>
+<body>
+
+         <!-- This is navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">ExamHall</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="">Hello, {{s.student}} <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'dashboard' %}">View Profile</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'viewhall' %}">View Hall</a>
+              </li >
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li >
+
+
+
+            </ul>
+          </div>
+        </nav>
+         <br>
+
+
+
+
+
+         <div class="container">
+       <table class="table table-dark">
+              <thead align="center">
+
+                <tr>
+                  <th scope="col" align="right">Student's Hall</th>
+                </tr>
+              </thead>
+              <thead>
+
+                <tr>
+                  <th scope="col">Fields</th>
+                  <th scope="col">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Name</th>
+                  <td>{{s.student}}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Roll No.</th>
+                  <td>{{s.roll}}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Hall</th>
+                  <td>{{s.hall}}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Block</th>
+                  <td>{{s.hall.block}}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Floor</th>
+                  <td>{{s.hall.floor}}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Seat No.</th>
+                  <td>{{s.seatno}}</td>
+                </tr>
+
+              </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div style="background-color:black;color:white; text-align:center;padding-bottom:10px;">
+            <p><h2>Copyright &copy; 2019 ExamHall.com</h2></p>
+
+        </div>
+
+
+
+
+
+</body>
+</html>
